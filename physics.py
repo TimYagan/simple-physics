@@ -102,7 +102,11 @@ def orbital_speed(gravity, mass, radius):
 
 #escape speed
 def escape_speed(gravity, mass, radius):
-	return math.sqrt(2 * (gravity * mass)/ radius)	
+	return math.sqrt(2 * (gravity * mass)/ radius)
+
+#mach number
+def mach_number(velocity, speed_of_sound):
+	return velocity / speed_of_sound	
 
 print ("Speed: ", speed(10,2))
 print ("Velocity: ", velocity(1, 4))
@@ -129,3 +133,4 @@ print ("Angular Velocity v / r: ", angular_velocity(20, 5))
 print ("Gravitational Potential -1 * Gm/ r ", gravitational_potential(6.6725985e-11, 1000, 50))
 print ("Orbital Speed sqrt (Gm/r): ", orbital_speed(6.6725985e-11, 10, 30))
 print ("Escape Speed sqrt (Gm/r): ", escape_speed(6.6725985e-11, 10, 30))
+print ("Mach Number velocity / speed of sound: ", mach_number(980.3, 342.62))
