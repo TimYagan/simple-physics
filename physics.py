@@ -92,6 +92,10 @@ def angular_frequency(frequency):
 def angular_velocity(velocity, radius):
 	return velocity / radius
 
+#gravitational potential
+def gravitational_potential(gravity, mass, radius):
+	return -1 * ((gravity * mass)/ radius)
+
 print ("Speed: ", speed(10,2))
 print ("Velocity: ", velocity(1, 4))
 print ("Delta Acceleration: ", delta_acceleration(1,2,2))
@@ -114,3 +118,4 @@ print ("Frequency 1 /time: ", frequency(50))
 print ("Pressure Force / area: ", pressure(500, 1))
 print ("Angular Frequency 2 * pi * frequency: ", angular_frequency(28))
 print ("Angular Velocity v / r: ", angular_velocity(20, 5))
+print ("Gravitational Potential -1 * Gm/ r ", gravitational_potential(9.8, 1000, 50))
