@@ -84,6 +84,10 @@ def frequency(time):
 def pressure(force, area):
 	return force / area
 
+#angular frequency
+def angular_frequency(frequency):
+	return 2 * math.pi * frequency
+
 print ("Speed: ", speed(10,2))
 print ("Velocity: ", velocity(1, 4))
 print ("Delta Acceleration: ", delta_acceleration(1,2,2))
@@ -103,4 +107,5 @@ print ("Mass Flow Rate (Sea Level) density * velocity * area : ", mass_flow_rate
 print ("Mass Flow Rate (Airplane Cruise Level) density * velocity * area : ", mass_flow_rate_complex(0.3054, 3000, 1))
 print ("Density mass / volume: ", density(100, 10))
 print ("Frequency 1 /time: ", frequency(50))
-print ("Pressure force / area: ", pressure(500, 1))
+print ("Pressure Force / area: ", pressure(500, 1))
+print ("Angular Frequency 2 * pi * frequency: ", angular_frequency(28))
