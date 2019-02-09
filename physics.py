@@ -20,11 +20,11 @@ def motion_eq2(initial_velocity, acceleration, time):
 
 def motion_eq3(final_velocity=None, initial_velocity=None, acceleration=None, change_in_displacement=None):
 	if(final_velocity == None):
-		result = (initial_velocity * initial_velocity) + (2*(acceleration)*change_in_displacement)
+		result = (initial_velocity ** 2) + (2*(acceleration)*change_in_displacement)
 		return math.sqrt(result)
 
 	if(initial_velocity == None):
-		result = (final_velocity * final_velocity) + (-2*(acceleration*change_in_displacement))
+		result = (final_velocity ** 2) + (-2*(acceleration*change_in_displacement))
 		return math.sqrt(result)
 
 #velocity
@@ -48,7 +48,7 @@ def weight(mass, gravity):
 
 #centripetal acceleration
 def centripetal_acceleration(velocity, radius):
-	return 0
+	return (velocity ** 2) / radius
 
 #momentum
 def momentum(mass, velocity):
@@ -56,7 +56,7 @@ def momentum(mass, velocity):
 
 #kinetic energy
 def kinetic_energy_eq1(mass, velocity):
-	return 0.5 * (mass * (velocity * velocity))
+	return 0.5 * (mass * (velocity ** 2))
 
 #mass flow rate - conservation of mass
 def mass_flow_rate(mass, time):
@@ -74,6 +74,7 @@ print ("Motion Equation s = s0 + v0t + 0.5*at2: ", motion_eq2(25, -2, 3))
 print ("Motion Equation v2 = v02 + 2as: ", motion_eq3(19,None, -8, 66))
 print ("Force m*a: ", force(10, 3))
 print ("Weight: ", weight(65, 9.8))
+print ("Centripetal Acceleration: ", centripetal_acceleration(30, 4))
 print ("Momentum p=mv: ", momentum(500, 10000))
 print ("Kinetic Energy 0.5*mv2: ", kinetic_energy_eq1(10, 5))
 print ("Mass Flow Rate mass / time: ", mass_flow_rate(1000, 10))
