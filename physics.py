@@ -68,6 +68,22 @@ def mass_flow_rate(mass, time):
 def mass_flow_rate_complex(density, velocity, area):
 	return density * velocity * area
 
+#volume flow rate - conservation of mass
+def volume_flow_rate(volume, time):
+	return volume / time
+
+#density
+def density(mass, volume):
+	return mass / volume
+
+#frequency
+def frequency(time):
+	return 1 / time	
+
+#pressure 
+def pressure(force, area):
+	return force / area
+
 print ("Speed: ", speed(10,2))
 print ("Velocity: ", velocity(1, 4))
 print ("Delta Acceleration: ", delta_acceleration(1,2,2))
@@ -82,5 +98,9 @@ print ("Momentum p=mv: ", momentum(500, 10000))
 print ("Kinetic Energy 0.5*mv2: ", kinetic_energy_eq1(10, 5))
 print ("Kinetic Energy p2 / 2m: ", kinetic_energy_eq1(10, 5))
 print ("Mass Flow Rate mass / time: ", mass_flow_rate(1000, 10))
+print ("Volume Flow Rate mass / time: ", volume_flow_rate(500, 5))
 print ("Mass Flow Rate (Sea Level) density * velocity * area : ", mass_flow_rate_complex(1.225, 3000, 1))
 print ("Mass Flow Rate (Airplane Cruise Level) density * velocity * area : ", mass_flow_rate_complex(0.3054, 3000, 1))
+print ("Density mass / volume: ", density(100, 10))
+print ("Frequency 1 /time: ", frequency(50))
+print ("Pressure force / area: ", pressure(500, 1))
