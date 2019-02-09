@@ -58,6 +58,9 @@ def momentum(mass, velocity):
 def kinetic_energy_eq1(mass, velocity):
 	return 0.5 * (mass * (velocity ** 2))
 
+def kinetic_energy_eq2(momentum, mass):
+	return (momentum ** 2) / (2 * mass)
+
 #mass flow rate - conservation of mass
 def mass_flow_rate(mass, time):
 	return mass / time
@@ -71,12 +74,13 @@ print ("Delta Acceleration: ", delta_acceleration(1,2,2))
 print ("Acceleration: ", acceleration(10,5))
 print ("Motion Equation v = v0 + at: ", motion_eq1(25, -2, 3))
 print ("Motion Equation s = s0 + v0t + 0.5*at2: ", motion_eq2(25, -2, 3))
-print ("Motion Equation v2 = v02 + 2as: ", motion_eq3(19,None, -8, 66))
+print ("Motion Equation v2 = v02 + 2as: ", motion_eq3(19, None, -8, 66))
 print ("Force m*a: ", force(10, 3))
 print ("Weight: ", weight(65, 9.8))
 print ("Centripetal Acceleration: ", centripetal_acceleration(30, 4))
 print ("Momentum p=mv: ", momentum(500, 10000))
 print ("Kinetic Energy 0.5*mv2: ", kinetic_energy_eq1(10, 5))
+print ("Kinetic Energy p2 / 2m: ", kinetic_energy_eq1(10, 5))
 print ("Mass Flow Rate mass / time: ", mass_flow_rate(1000, 10))
 print ("Mass Flow Rate (Sea Level) density * velocity * area : ", mass_flow_rate_complex(1.225, 3000, 1))
 print ("Mass Flow Rate (Airplane Cruise Level) density * velocity * area : ", mass_flow_rate_complex(0.3054, 3000, 1))
