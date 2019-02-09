@@ -116,6 +116,10 @@ def mach_number(velocity, speed_of_sound):
 def efficiency(energy_output, energy_input):
 	return (energy_output / energy_input) * 100
 
+#power
+def power(work, time):
+	return work / time
+
 
 print ("Speed: ", speed(10,2))
 print ("Velocity: ", velocity(1, 4))
@@ -145,3 +149,4 @@ print ("Orbital Speed sqrt (Gm/r): ", orbital_speed(6.6725985e-11, 10, 30))
 print ("Escape Speed sqrt (Gm/r): ", escape_speed(6.6725985e-11, 10, 30))
 print ("Mach Number velocity / speed of sound: ", mach_number(980.3, 342.62))
 print ("Efficiency energy_output / energy_input: % ", efficiency(1000, 2000))
+print ("Power work / time: ", power(1000, 10))
