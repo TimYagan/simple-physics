@@ -96,17 +96,26 @@ def angular_velocity(velocity, radius):
 def gravitational_potential(gravity, mass, radius):
 	return -1 * ((gravity * mass)/ radius)
 
+#gravitational potential energy
+def gravitational_potential_energy(gravity, mass1, mass2, distance_between_masses):
+	return -1 * ((gravity * mass1 * mass2) / distance_between_masses)
+
 #orbital speed
 def orbital_speed(gravity, mass, radius):
 	return math.sqrt((gravity * mass)/ radius)	
 
 #escape speed
 def escape_speed(gravity, mass, radius):
-	return math.sqrt(2 * (gravity * mass)/ radius)
+	return math.sqrt(2 * (gravity * mass)/ (radius))
 
 #mach number
 def mach_number(velocity, speed_of_sound):
 	return velocity / speed_of_sound	
+
+#efficiency
+def efficiency(energy_output, energy_input):
+	return (energy_output / energy_input) * 100
+
 
 print ("Speed: ", speed(10,2))
 print ("Velocity: ", velocity(1, 4))
@@ -131,6 +140,8 @@ print ("Pressure Force / area: ", pressure(500, 1))
 print ("Angular Frequency 2 * pi * frequency: ", angular_frequency(28))
 print ("Angular Velocity v / r: ", angular_velocity(20, 5))
 print ("Gravitational Potential -1 * Gm/ r ", gravitational_potential(6.6725985e-11, 1000, 50))
+print ("Gravitational Potential Energy - * Gm1m2 / r: ", gravitational_potential_energy(6.6725985e-11, 6.0e-24, 250, 4.24e-10))
 print ("Orbital Speed sqrt (Gm/r): ", orbital_speed(6.6725985e-11, 10, 30))
 print ("Escape Speed sqrt (Gm/r): ", escape_speed(6.6725985e-11, 10, 30))
 print ("Mach Number velocity / speed of sound: ", mach_number(980.3, 342.62))
+print ("Efficiency energy_output / energy_input: % ", efficiency(1000, 2000))
