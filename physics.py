@@ -120,6 +120,10 @@ def efficiency(energy_output, energy_input):
 def power(work, time):
 	return work / time
 
+#impulse
+def impulse(force, time):
+	return force * time
+
 
 print ("Speed: ", speed(10,2))
 print ("Velocity: ", velocity(1, 4))
@@ -150,3 +154,4 @@ print ("Escape Speed sqrt (Gm/r): ", escape_speed(6.6725985e-11, 10, 30))
 print ("Mach Number velocity / speed of sound: ", mach_number(980.3, 342.62))
 print ("Efficiency energy_output / energy_input: % ", efficiency(1000, 2000))
 print ("Power work / time: ", power(1000, 10))
+print ("Impulse force * time: ", impulse(500, 2))
