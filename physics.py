@@ -89,8 +89,8 @@ def angular_frequency(frequency):
 	return 2 * math.pi * frequency
 
 #angular velocity
-def angular_velocity(velocity, radius):
-	return velocity / radius
+def angular_velocity(linear_velocity, radius):
+	return linear_velocity / radius
 
 #gravitational potential
 def gravitational_potential(gravity, mass, radius):
