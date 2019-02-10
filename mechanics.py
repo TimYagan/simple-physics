@@ -200,6 +200,10 @@ def projectile_maximum_height(vertical_velocity, gravity):
 def reduced_mass(mass1, mass2):
 	return mass1 * mass2 / (mass1 + mass2)
 
+#tsiolkovsky rocket equation
+def tsiolkovsky_rocket_equation(exhaust_velocity, initial_mass, final_mass):
+		return exhaust_velocity * math.log(initial_mass / final_mass)
+
 
 '''
 print ("Speed: ", speed(10,2))
@@ -252,3 +256,4 @@ print ("Projectile Motion: Time of Flight: 2 * vertical velocity / gravity: ", p
 print ("Projectile Motion: Range: 2 * horizontal velocity * vertical velocity / gravity: ", projectile_range(98.4808, 17.36482, 9.80665))
 print ("Projectile Motion: Maximum Height: vertical velocity^2 / (2 * gravity): ", projectile_maximum_height(17.36482, 9.80665))
 print ("Reduced Mass: mass1 * mass2/ mass1 + mass2: ", reduced_mass(1000, 1200))
+print ("Tsiolkovsky Rocket Equation: exhaust velocity * log(intial mass / final mass) -> (m/s): ", tsiolkovsky_rocket_equation(1000, 1000, 1))
