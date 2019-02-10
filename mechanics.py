@@ -175,6 +175,27 @@ def mechanical_advantage_ramp(ramp_height, ramp_length):
 def mechanical_advantage_wheel_axle(wheel_radius, axle_radius):
 	return wheel_radius / axle_radius
 
+
+#projectile motion - horizontal velocity
+def projectile_horizontal_velocity(velocity, angle_of_launch):
+	return velocity * (math.cos(math.radians(angle_of_launch)))
+
+#projectile motion - vertical velocity
+def projectile_vertical_velocity(velocity, angle_of_launch):
+	return velocity * (math.sin(math.radians(angle_of_launch)))
+
+#projectile motion - time of flight
+def projectile_time_of_flight(vertical_velocity, gravity):
+	return 2 * vertical_velocity / gravity
+
+#projectile motion - range of the projectile
+def projectile_range(horizontal_velocity, vertical_velocity, gravity):
+	return 2 * horizontal_velocity * vertical_velocity / gravity
+
+#projectile motion - maximum height
+def projectile_maximum_height(vertical_velocity, gravity):
+	return (vertical_velocity ** 2) / (2 * gravity)
+
 '''
 print ("Speed: ", speed(10,2))
 print ("Velocity: ", velocity(1, 4))
@@ -220,3 +241,8 @@ print ("Mechanical Advantage of a wedge: wedge length / wedge thickness: ", mech
 print ("Mechanical Advantage of a ramp: 1 / (ramp height/ ramp length): ", mechanical_advantage_ramp(2, 25))
 print ("Mechanical Advantage of wheel and axle: wheel radius / axle radius: ", mechanical_advantage_wheel_axle(40, 20))
 '''
+print ("Projectile Motion: Horizontal Velocity: v * cos(angle of launch): ", projectile_horizontal_velocity(100, 10))
+print ("Projectile Motion: Vertical Velocity: v * sin(angle of launch): ", projectile_vertical_velocity(100, 10))
+print ("Projectile Motion: Time of Flight: 2 * vertical velocity / gravity: ", projectile_time_of_flight(17.36482, 9.80665))
+print ("Projectile Motion: Range: 2 * horizontal velocity * vertical velocity / gravity: ", projectile_range(98.4808, 17.36482, 9.80665))
+print ("Projectile Motion: Maximum Height: vertical velocity^2 / (2 * gravity): ", projectile_maximum_height(17.36482, 9.80665))
