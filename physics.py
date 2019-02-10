@@ -128,6 +128,13 @@ def impulse(force, time):
 def torque(lever_distance, force, angle):
 	return lever_distance * force * (math.sin(math.radians(angle)))
 
+#pendulum period
+def pendulum_period(length, gravity):
+	return 2 * math.pi * (math.sqrt(length / gravity))
+
+#pendulum frequency
+def pendulum_frequency(length, gravity):
+	return 1 / (2 * math.pi * (math.sqrt(length / gravity)))
 
 print ("Speed: ", speed(10,2))
 print ("Velocity: ", velocity(1, 4))
@@ -160,3 +167,5 @@ print ("Efficiency energy_output / energy_input: % ", efficiency(1000, 2000))
 print ("Power work / time: ", power(1000, 10))
 print ("Impulse force * time: ", impulse(500, 2))
 print ("Torque r * F * sin (angle-degrees): ", torque(1000, 100, 90))
+print ("Pendulum Period 2pi * sqrt(L/g): ", pendulum_period(1, 9.80665))
+print ("Pendulum Frequency 1/ (2pi * sqrt(L/g)): ", pendulum_frequency(1, 9.80665))
