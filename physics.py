@@ -152,6 +152,30 @@ def freefall_time(velocity, gravity):
 def friction_coefficient(force, friction):
 	return friction / force
 
+#mechanical advantage - lever
+def mechanical_advantage_lever(effort_arm_length, load_arm_lenth):
+	return effort_arm_length / load_arm_lenth
+
+#mechanical advantage - pulley
+def mechanical_advantage_pulley(number_of_pulleys):
+	return number_of_pulleys * 2	
+
+#mechanical advantage - screw
+def mechanical_advantage_screw(diameter, distance_between_threads):
+	return math.pi * (diameter / distance_between_threads)
+
+#mechanical advantage - wedge
+def mechanical_advantage_wedge(wedge_length, wedge_thickness):
+	return wedge_length / wedge_thickness
+
+#mechanical advantage - ramp
+def mechanical_advantage_ramp(ramp_height, ramp_length):
+	return 1 / (ramp_height / ramp_length)
+
+#mechanical advantage - wheel and axle
+def mechanical_advantage_wheel_axle(wheel_radius, axle_radius):
+	return wheel_radius / axle_radius
+
 print ("Speed: ", speed(10,2))
 print ("Velocity: ", velocity(1, 4))
 print ("Delta Acceleration: ", delta_acceleration(1,2,2))
@@ -189,3 +213,9 @@ print ("Freefall Speed g * t: ", freefall_speed(9.80665, 10))
 print ("Freefall Distance 0.5 * g * t^2: ", freefall_speed(9.80665, 8))
 print ("Freefall Time velocity / g: ", freefall_time(78.4532, 9.80665))
 print ("Friction Co-efficient friction / force: ", friction_coefficient(500, 10))
+print ("Mechanical Advantage of a lever: effort arm length / load arm length: ", mechanical_advantage_lever(10, 2))
+print ("Mechanical Advantage of pulleys: number of pulleys * 2: ", mechanical_advantage_pulley(2))
+print ("Mechanical Advantage of a screw: pi * (diameter / distance between threads): ", mechanical_advantage_screw(100, 10))
+print ("Mechanical Advantage of a wedge: wedge length / wedge thickness: ", mechanical_advantage_wedge(100, 8))
+print ("Mechanical Advantage of a ramp: 1 / (ramp height/ ramp length): ", mechanical_advantage_ramp(2, 25))
+print ("Mechanical Advantage of wheel and axle: wheel radius / axle radius: ", mechanical_advantage_wheel_axle(40, 20))
