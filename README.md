@@ -1,5 +1,5 @@
-# simple-physics
-A simple physics library which covers a few mechanics and propulsion equations.
+# Simple Physics Library
+A simple physics library which covers a few mechanics and propulsion equations. Interpretation of common physics equations can be complex. This library helps to simplify the code needed to implement various equations.
 
 Here be bugs, tread lightly.
 
