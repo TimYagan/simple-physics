@@ -124,6 +124,10 @@ def power(work, time):
 def impulse(force, time):
 	return force * time
 
+#torque - math.sin utilises radians. You have to convert radians to degrees to get an accurate torque reading
+def torque(lever_distance, force, angle):
+	return lever_distance * force * (math.sin(math.radians(angle)))
+
 
 print ("Speed: ", speed(10,2))
 print ("Velocity: ", velocity(1, 4))
@@ -155,3 +159,4 @@ print ("Mach Number velocity / speed of sound: ", mach_number(980.3, 342.62))
 print ("Efficiency energy_output / energy_input: % ", efficiency(1000, 2000))
 print ("Power work / time: ", power(1000, 10))
 print ("Impulse force * time: ", impulse(500, 2))
+print ("Torque r * F * sin (angle-degrees): ", torque(1000, 100, 90))
