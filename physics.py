@@ -148,6 +148,10 @@ def freefall_distance(gravity, time):
 def freefall_time(velocity, gravity):
 	return velocity / gravity
 
+#friction co-efficient
+def friction_coefficient(force, friction):
+	return friction / force
+
 print ("Speed: ", speed(10,2))
 print ("Velocity: ", velocity(1, 4))
 print ("Delta Acceleration: ", delta_acceleration(1,2,2))
@@ -184,3 +188,4 @@ print ("Pendulum Frequency 1/ (2pi * sqrt(L/g)): ", pendulum_frequency(1, 9.8066
 print ("Freefall Speed g * t: ", freefall_speed(9.80665, 10))
 print ("Freefall Distance 0.5 * g * t^2: ", freefall_speed(9.80665, 8))
 print ("Freefall Time velocity / g: ", freefall_time(78.4532, 9.80665))
+print ("Friction Co-efficient friction / force: ", friction_coefficient(500, 10))
