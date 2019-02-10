@@ -2,7 +2,6 @@
 
 #Copyright (c) 2019 Tim Yagan
 
-
 import math
 
 #speed
@@ -176,6 +175,7 @@ def mechanical_advantage_ramp(ramp_height, ramp_length):
 def mechanical_advantage_wheel_axle(wheel_radius, axle_radius):
 	return wheel_radius / axle_radius
 
+'''
 print ("Speed: ", speed(10,2))
 print ("Velocity: ", velocity(1, 4))
 print ("Delta Acceleration: ", delta_acceleration(1,2,2))
@@ -219,3 +219,4 @@ print ("Mechanical Advantage of a screw: pi * (diameter / distance between threa
 print ("Mechanical Advantage of a wedge: wedge length / wedge thickness: ", mechanical_advantage_wedge(100, 8))
 print ("Mechanical Advantage of a ramp: 1 / (ramp height/ ramp length): ", mechanical_advantage_ramp(2, 25))
 print ("Mechanical Advantage of wheel and axle: wheel radius / axle radius: ", mechanical_advantage_wheel_axle(40, 20))
+'''
