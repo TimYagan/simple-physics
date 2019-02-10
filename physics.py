@@ -136,6 +136,18 @@ def pendulum_period(length, gravity):
 def pendulum_frequency(length, gravity):
 	return 1 / (2 * math.pi * (math.sqrt(length / gravity)))
 
+#freefall speed
+def freefall_speed(gravity, time):
+	return gravity * time
+
+#freefall distance
+def freefall_distance(gravity, time):
+	return 0.5 * gravity * (time ** 2)
+
+#freefall time of fall
+def freefall_time(velocity, gravity):
+	return velocity / gravity
+
 print ("Speed: ", speed(10,2))
 print ("Velocity: ", velocity(1, 4))
 print ("Delta Acceleration: ", delta_acceleration(1,2,2))
@@ -169,3 +181,6 @@ print ("Impulse force * time: ", impulse(500, 2))
 print ("Torque r * F * sin (angle-degrees): ", torque(1000, 100, 90))
 print ("Pendulum Period 2pi * sqrt(L/g): ", pendulum_period(1, 9.80665))
 print ("Pendulum Frequency 1/ (2pi * sqrt(L/g)): ", pendulum_frequency(1, 9.80665))
+print ("Freefall Speed g * t: ", freefall_speed(9.80665, 10))
+print ("Freefall Distance 0.5 * g * t^2: ", freefall_speed(9.80665, 8))
+print ("Freefall Time velocity / g: ", freefall_time(78.4532, 9.80665))
