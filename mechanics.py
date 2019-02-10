@@ -196,6 +196,11 @@ def projectile_range(horizontal_velocity, vertical_velocity, gravity):
 def projectile_maximum_height(vertical_velocity, gravity):
 	return (vertical_velocity ** 2) / (2 * gravity)
 
+#reduced mass
+def reduced_mass(mass1, mass2):
+	return mass1 * mass2 / (mass1 + mass2)
+
+
 '''
 print ("Speed: ", speed(10,2))
 print ("Velocity: ", velocity(1, 4))
@@ -246,3 +251,4 @@ print ("Projectile Motion: Vertical Velocity: v * sin(angle of launch): ", proje
 print ("Projectile Motion: Time of Flight: 2 * vertical velocity / gravity: ", projectile_time_of_flight(17.36482, 9.80665))
 print ("Projectile Motion: Range: 2 * horizontal velocity * vertical velocity / gravity: ", projectile_range(98.4808, 17.36482, 9.80665))
 print ("Projectile Motion: Maximum Height: vertical velocity^2 / (2 * gravity): ", projectile_maximum_height(17.36482, 9.80665))
+print ("Reduced Mass: mass1 * mass2/ mass1 + mass2: ", reduced_mass(1000, 1200))
