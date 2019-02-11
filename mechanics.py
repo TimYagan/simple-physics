@@ -249,7 +249,6 @@ print ("Mechanical Advantage of a screw: pi * (diameter / distance between threa
 print ("Mechanical Advantage of a wedge: wedge length / wedge thickness: ", mechanical_advantage_wedge(100, 8))
 print ("Mechanical Advantage of a ramp: 1 / (ramp height/ ramp length): ", mechanical_advantage_ramp(2, 25))
 print ("Mechanical Advantage of wheel and axle: wheel radius / axle radius: ", mechanical_advantage_wheel_axle(40, 20))
-'''
 print ("Projectile Motion: Horizontal Velocity: v * cos(angle of launch): ", projectile_horizontal_velocity(100, 10))
 print ("Projectile Motion: Vertical Velocity: v * sin(angle of launch): ", projectile_vertical_velocity(100, 10))
 print ("Projectile Motion: Time of Flight: 2 * vertical velocity / gravity: ", projectile_time_of_flight(17.36482, 9.80665))
@@ -257,3 +256,4 @@ print ("Projectile Motion: Range: 2 * horizontal velocity * vertical velocity / 
 print ("Projectile Motion: Maximum Height: vertical velocity^2 / (2 * gravity): ", projectile_maximum_height(17.36482, 9.80665))
 print ("Reduced Mass: mass1 * mass2/ mass1 + mass2: ", reduced_mass(1000, 1200))
 print ("Tsiolkovsky Rocket Equation: exhaust velocity * log(intial mass / final mass) -> (m/s): ", tsiolkovsky_rocket_equation(1000, 1000, 1))
+'''
