@@ -75,6 +75,10 @@ def solid_expansion_area(initial_area_of_solid, solid_coefficient, change_in_tem
 def solid_expansion_volume(initial_volume, solid_coefficient, change_in_temperature):
 	return 3 * solid_coefficient * initial_volume * change_in_temperature
 
+#liquid expansion
+def liquid_expansion(initial_volume, liquid_coefficient, change_in_temperature):
+	return liquid_coefficient * initial_volume * change_in_temperature
+
 '''
 print ("Sensible Heat: Q = m * c * delta T: ", sensible_heat(1, 753, 220))
 print ("Specific Latent Heat: Q = m * specific latent capacity: ", specific_latent_heat(1, 2258))
@@ -91,7 +95,9 @@ print ("Ideal Gas Law - Statistical Thermodynamics: PV = nRT - volume: ", ideal_
 print ("Ideal Gas Law - Statistical Thermodynamics: PV = nRT - moles: ", ideal_gas_law_st_moles(4874.4982, 1.0, 1.382 * 10 ** -23, celsius_to_kelvin(20)))
 print ("Ideal Gas Law - Statistical Thermodynamics: PV = nRT - temperature: ", ideal_gas_law_st_temperature(4874.4982, 1.0, 2.0, 1.382 * 10 ** -23))
 
-print ("Solid Expansion - length: intial length * expansion coefficient * change in temperature: ", solid_expansion_length(0.01, 19*(10**-6), 10))
-print ("Solid Expansion - area: intial area * expansion coefficient * change in temperature: ", solid_expansion_area(2, 19*(10**-6), 10))
-print ("Solid Expansion - volume: intial volume * expansion coefficient * change in temperature: ", solid_expansion_volume(2, 19*(10**-6), 10))
+print ("Solid Expansion - length: intial length * expansion coefficient * change in temperature: ", solid_expansion_length(0.01, 19 * (10**-6), 10))
+print ("Solid Expansion - area: intial area * expansion coefficient * change in temperature: ", solid_expansion_area(2, 19 * (10**-6), 10))
+print ("Solid Expansion - volume: intial volume * expansion coefficient * change in temperature: ", solid_expansion_volume(2, 19 * (10**-6), 10))
+
+print ("Liquid Expansion - volume: initial volume * expansion coefficient * change in temperature: ", liquid_expansion(20, 457 * (10**-6), 50))
 '''
