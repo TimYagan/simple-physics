@@ -41,12 +41,41 @@ def ideal_gas_law_ft_moles(pressure, volume, gas_constant, absolute_temperature)
 def ideal_gas_law_ft_temperature(pressure, volume, number_of_moles, gas_constant):
 	return (pressure * volume) / (number_of_moles * gas_constant)
 
+##################################
+#ideal gas law - statistical thermodynamics
+def ideal_gas_law_st(number_of_moles, boltzmann_constant, absolute_temperature):
+	return number_of_moles * boltzmann_constant * absolute_temperature
+
+#ideal gas law - statistical thermodynamics - pressure
+def ideal_gas_law_st_pressure(volume, number_of_moles, boltzmann_constant, absolute_temperature):
+	return (number_of_moles * boltzmann_constant * absolute_temperature) / volume
+
+#ideal gas law - statistical thermodynamics - volume
+def ideal_gas_law_st_volume(pressure, number_of_moles, boltzmann_constant, absolute_temperature):
+	return (number_of_moles * boltzmann_constant * absolute_temperature) / pressure
+
+#ideal gas law - statistical thermodynamics - moles
+def ideal_gas_law_st_moles(pressure, volume, boltzmann_constant, absolute_temperature):
+	return (pressure * volume) / (boltzmann_constant * absolute_temperature)
+
+#ideal gas law - statistical thermodynamics - temperature
+def ideal_gas_law_st_temperature(pressure, volume, number_of_moles, boltzmann_constant):
+	return (pressure * volume) / (number_of_moles * boltzmann_constant)
+
+
 '''
 print ("Sensible Heat: Q = m * c * delta T: ", sensible_heat(1, 753, 220))
 print ("Specific Latent Heat: Q = m * specific latent capacity: ", specific_latent_heat(1, 2258))
+
 print ("Ideal Gas Law - Functional Thermodynamics: PV = nRT: ", ideal_gas_law_ft(1, 8.314, celsius_to_kelvin(20)))
 print ("Ideal Gas Law - Functional Thermodynamics: PV = nRT - pressure: ", ideal_gas_law_ft_pressure(1.0, 2.0, 8.314, celsius_to_kelvin(20)))
 print ("Ideal Gas Law - Functional Thermodynamics: PV = nRT - volume: ", ideal_gas_law_ft_volume(4874.4982, 2.0, 8.314, celsius_to_kelvin(20)))
 print ("Ideal Gas Law - Functional Thermodynamics: PV = nRT - moles: ", ideal_gas_law_ft_moles(4874.4982, 1.0, 8.314, celsius_to_kelvin(20)))
 print ("Ideal Gas Law - Functional Thermodynamics: PV = nRT - temperature: ", ideal_gas_law_ft_temperature(4874.4982, 1.0, 2.0, 8.314))
+
+print ("Ideal Gas Law - Statistical Thermodynamics: PV = nRT: ", ideal_gas_law_st(1, 8.314, celsius_to_kelvin(20)))
+print ("Ideal Gas Law - Statistical Thermodynamics: PV = nRT - pressure: ", ideal_gas_law_st_pressure(1.0, 2.0, 1.382 * 10 ** -23, celsius_to_kelvin(20)))
+print ("Ideal Gas Law - Statistical Thermodynamics: PV = nRT - volume: ", ideal_gas_law_st_volume(4874.4982, 2.0, 1.382 * 10 ** -23, celsius_to_kelvin(20)))
+print ("Ideal Gas Law - Statistical Thermodynamics: PV = nRT - moles: ", ideal_gas_law_st_moles(4874.4982, 1.0, 1.382 * 10 ** -23, celsius_to_kelvin(20)))
+print ("Ideal Gas Law - Statistical Thermodynamics: PV = nRT - temperature: ", ideal_gas_law_st_temperature(4874.4982, 1.0, 2.0, 1.382 * 10 ** -23))
 '''
